@@ -26,10 +26,13 @@ public class GameService{
         while(playersQueue.size()>1){
             Player player = playersQueue.poll();
             System.out.println(player.getPlayerName()+ "'s turn");
+
             int diceValue = DiceService.rollDice(noOfDice);
             System.out.println(player.getPlayerName()+" rolled a dice 🎲.\nDice value is "+diceValue);
+
             int newPos = BoardService.getNewPosition(board, player.getPlayerPosition(), diceValue);
             System.out.println("New position of "+player.getPlayerName()+" is "+ newPos);
+            
             player.setPlayerPosition(newPos);
             if(player.getPlayerPosition() == board.getBoardSize()){
                 player.setWin(true);

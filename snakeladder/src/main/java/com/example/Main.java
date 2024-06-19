@@ -19,8 +19,8 @@ public class Main {
         return map;
     }
     public static void main(String[] args) {
-        int[][] ladders_array = {};
-        int[][] snakes_array = {};
+        int[][] snakes_array = {{62, 5}, {33, 6}, {49, 9}, {88, 16}, {41, 20}, {56, 53}, {98, 64}, {93, 73}, {95, 75}};
+        int[][] ladders_array = {{2, 37}, {27, 46}, {10, 32}, {51, 68}, {61, 79}, {65, 84}, {71, 91}, {81, 100}};
         
         int boardSize = 100;
         HashMap<Integer, Integer> snakes = createStructures(snakes_array);
@@ -32,7 +32,7 @@ public class Main {
         Player p2 = new Player("Ankur", 1);
         Player p3 = new Player("Nitish", 2);
         List<Player> players = new ArrayList<>();
-        int noOfDice = 2;
+        int noOfDice = 1;
 
         players.add(p1);
         players.add(p2);

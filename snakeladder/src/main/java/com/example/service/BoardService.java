@@ -16,9 +16,11 @@ public class BoardService{
         if(isLadderPresent(board, newKey)){
             newPos = getLadderExit(board, newKey);
             System.out.println("Ladder Present "+ newKey + "##########" + newPos);
+            newPos = getNewPosition(board , 0, newPos);
         }else if(isSnakePresent(board, newKey)){
             newPos = getSnakeExit(board, newKey);
             System.out.println("Snake Present "+ newKey+"-----------" + newPos);
+            newPos = getNewPosition(board , 0, newPos);
         }else if(board.getBoardSize() < newKey){
             newPos = currPos;
             System.out.println("New Position exceeding board limit");

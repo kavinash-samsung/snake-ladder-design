@@ -14,7 +14,7 @@ public class Player{
         this.isWin = false;
         this.playerPosition = 0;
         this.totalMoves = 0;
-        int winPosition = 0;
+        this.winPosition = 0;
     }
     public void setWinPosition(int winPosition){
         this.winPosition = winPosition;

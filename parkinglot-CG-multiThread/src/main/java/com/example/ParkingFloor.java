@@ -44,14 +44,14 @@ public class ParkingFloor {
             }
         }
     }
-    public synchronized ParkingResult park(int vehicleType, String vehicleNumber, String ticketId){
+    public ParkingResult park(int vehicleType, String vehicleNumber, String ticketId){
         if(availableSpots.get(vehicleType).get() > 0){
             availableSpots.get(vehicleType).decrementAndGet();
             ParkingSpot spot = freeSpots.get(vehicleType).remove();
             spot.setVehicleNumber(vehicleNumber);
             spot.setTicketId(ticketId);
             spot.parkVehicle();
-            return new ParkingResult(201, spot.getSpotId(), vehicleNumber, ticketId)
+            return new ParkingResult(201, spot.getSpotId(), vehicleNumber, ticketId);
         }
         return new ParkingResult(404, "", vehicleNumber, ticketId);
     }
@@ -70,7 +70,7 @@ public class ParkingFloor {
     //     }
     //     return new ParkingResult(404, "", vehicleNumber, ticketId);
     // }
-    public synchronized int unpark(int row, int col){
+    public int unpark(int row, int col){
         if(row < 0 || row >= this.getRow() || col < 0 || col >= this.getColumn() || !parkingSpots[row][col].isParked()){
             return 404;
         }

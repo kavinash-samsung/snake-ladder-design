@@ -3,6 +3,20 @@ package com.example;
 public class ParkingSpot {
     private String spotId;
     private int vehicleType;
+    private String vehicleNumber;
+    public String getVehicleNumber() {
+        return vehicleNumber;
+    }
+    public void setVehicleNumber(String vehicleNumber) {
+        this.vehicleNumber = vehicleNumber;
+    }
+    private String ticketId;
+    public String getTicketId() {
+        return ticketId;
+    }
+    public void setTicketId(String ticketId) {
+        this.ticketId = ticketId;
+    }
     private boolean isParked;
     private boolean isActive;
     public ParkingSpot(String spotId, int vehicleType, boolean isParked, boolean isActive) {

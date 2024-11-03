@@ -13,6 +13,6 @@ public class Main {
         pageCounterService.incrementVisitCount(1);
         pageCounterService.incrementVisitCount(0);
         System.out.println(pageCounterService.getVisitCount(0));
-        System.out.println(pageCounterService.getVisitCount(1));
+        System.out.println(pageCounterService.getVisitCount(1)); 
     }
 }

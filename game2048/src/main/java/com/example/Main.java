@@ -2,6 +2,6 @@ package com.example;
 
 public class Main {
     public static void main(String[] args) {
-        // HelperQ7 helper07 = new HelperQ7();
+        System.out.println("Hello world!");
     }
 }

@@ -1,5 +1,5 @@
 package com.example;
 
-class HelperQ7{
+class Helper08{
     void print(String s){System.out.print(s);} void println(String s){print(s+"\n");}
 }

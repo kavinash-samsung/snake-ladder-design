@@ -3,7 +3,7 @@ package com.example;
 import java.util.*;
 
 public class Solution implements Q07ParkingLotInterface {
-    private Helper07 helper;
+    private HelperQ7 helper;
     private List<ParkingFloor> parkingFloors;
     private ParkingManager parkingManager;
     private int[] vehicleTypes;
@@ -15,7 +15,7 @@ public class Solution implements Q07ParkingLotInterface {
         vehicleTypes = new int[]{2, 4};
     }
 
-    public void init(Helper07 helper, Integer [][][] parking) {
+    public void init(HelperQ7 helper, Integer [][][] parking) {
         this.helper=helper;
         helper.println("parking lot initialized");
         for(int i=0;i<parking.length;i++){
